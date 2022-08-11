@@ -1,0 +1,568 @@
+
+/*
+Theme Name: Hooks!
+Theme URI: https://www.monjibram.com
+Author: Benji
+Author URI: https://www.monjibram.com
+Description: Hooks! is a blank canvas for your ideas and it makes the block editor your best brush. With new block patterns, which allow you to create a beautiful layout in a matter of seconds, this theme’s soft colors and eye-catching — yet timeless — design will let your work shine. Take it for a spin! See how Hooks! elevates your portfolio, business website, or personal blog.
+Requires at least: 5.6
+Tested up to: 5.7
+Requires PHP: 5.6
+Version: 1.3
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: hooks
+*/
+
+/* # HTML5 Reset
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Baseline Normalize
+--------------------------------------------- */
+/* normalize.css v4.1.1 | MIT License | http://necolas.github.io/normalize.css/ */
+
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}template,[hidden]{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-0.25em}sup{top:-0.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:bold}button,input{overflow:visible}button,select{text-transform:none}button,html [type="button"],[type="reset"],[type="submit"]{-webkit-appearance:button}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type="checkbox"],[type="radio"]{box-sizing:border-box;padding:0}[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto}[type="search"]{-webkit-appearance:textfield;outline-offset:-2px}[type="search"]::-webkit-search-cancel-button,[type="search"]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:0.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+
+/* ## Box Sizing
+--------------------------------------------- */
+
+html,
+input[type="search"] {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:    border-box;
+	box-sizing:         border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+/* ## Float Clearing
+--------------------------------------------- */
+
+.author-box::before,
+.clearfix::before,
+.entry::before,
+.entry-content::before,
+.footer-widgets::before,
+.nav-primary::before,
+.nav-secondary::before,
+.pagination::before,
+.site-container::before,
+.site-footer::before,
+.site-header::before,
+.site-inner::before,
+.widget::before,
+.wrap::before {
+	content: " ";
+	display: table;
+}
+
+.author-box::after,
+.clearfix::after,
+.entry::after,
+.entry-content::after,
+.footer-widgets::after,
+.nav-primary::after,
+.nav-secondary::after,
+.pagination::after,
+.site-container::after,
+.site-footer::after,
+.site-header::after,
+.site-inner::after,
+.widget::after,
+.wrap::after {
+	clear: both;
+	content: " ";
+	display: table;
+}
+
+
+/* # Defaults
+---------------------------------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+/* ## Top Hat Layout Structures
+--------------------------------------------- */
+
+section {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+
+/* ## Typographical Elements
+--------------------------------------------- */
+
+html {
+	font-size: 62.5%; /* 10px browser default */
+	scroll-behavior: smooth;
+}
+
+html, body {
+  width: 100%;
+  height: auto;
+  background-color: #e8e6e1;
+  color: #1c0927;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Chrome fix */
+body > div {
+	font-size: 20px;
+  scroll-margin-top: 20px;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+	scroll-behavior: smooth;
+}
+
+a,
+button,
+input:focus,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+textarea:focus,
+.button,
+.gallery img {
+	-webkit-transition: all 0.1s ease-in-out;
+	-moz-transition:    all 0.1s ease-in-out;
+	-ms-transition:     all 0.1s ease-in-out;
+	-o-transition:      all 0.1s ease-in-out;
+	transition:         all 0.1s ease-in-out;
+}
+
+a {
+	text-decoration: underline;
+}
+
+a:focus,
+a:hover {
+	text-decoration: none;
+}
+
+p {
+	margin: 0 0 28px;
+	padding: 0;
+}
+p:last-child { margin-bottom: unset; }
+
+ol,
+ul {
+	margin: 0 0 28px;
+	padding: 0 0 0 20px;
+	list-style-position: outside;
+}
+li + ol,
+li + ul {
+	margin-bottom: unset;
+}
+
+hr {
+	border: 0;
+	border-collapse: collapse;
+	border-top: 1px solid #eee;
+	clear: both;
+	margin: 1em 0;
+}
+
+b,
+strong { font-weight: 700; }
+
+blockquote,
+cite,
+em,
+i { font-style: italic; }
+
+mark {
+	background: #ddd;
+	color: #000;
+}
+
+blockquote { margin: 40px; }
+
+blockquote::before {
+	content: "\201C";
+	display: block;
+	font-size: 30px;
+	height: 0;
+	left: -20px;
+	position: relative;
+	top: -10px;
+}
+
+/* ## Objects
+--------------------------------------------- */
+embed,
+iframe,
+img,
+object,
+video,
+.wp-caption { max-width: 100%; }
+
+img { height: auto; }
+figure { margin: 0; }
+
+/* ## Forms
+--------------------------------------------- */
+::-moz-placeholder {
+	color: #333;
+	opacity: 1;
+}
+
+::-webkit-input-placeholder {
+	color: #333;
+}
+
+/* ## Tables
+--------------------------------------------- */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	line-height: 2;
+	margin-bottom: 40px;
+	width: 100%;
+	word-break: break-all;
+}
+
+tbody { border-bottom: 1px solid #eee; }
+
+td,
+th { text-align: left; }
+
+td {
+	border-top: 1px solid #eee;
+	padding: 6px;
+}
+
+th {
+	font-weight: 400;
+	padding: 0 6px;
+}
+
+td:first-child,
+th:first-child { padding-left: 0; }
+
+
+/* ## Slick Sliders
+--------------------------------------------- */
+.slick-slide, .slick-slide:focus { outline: none !important; }
+
+
+/* ## Screen Reader Text
+--------------------------------------------- */
+.screen-reader-shortcut,
+.screen-reader-text,
+.screen-reader-text span {
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+.screen-reader-text:focus,
+.screen-reader-shortcut:focus,
+.widget_search input[type="submit"]:focus {
+	background: #fff;
+	box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
+	clip: auto !important;
+	color: #333;
+	display: block;
+	font-size: 1em;
+	font-weight: bold;
+	height: auto;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+.more-link { position: relative; }
+
+/* # Global
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Font References
+--------------------------------------------- */
+
+/* ## Site Specific Containers
+--------------------------------------------- */
+
+/* ## Animations
+--------------------------------------------- */
+
+
+
+/* // Dot Loader */
+@keyframes dot {
+	0% {background-color:#f1eee8;}
+	30% {background-color:#f1eee8;}
+	50% {background-color: #ffca3a;}
+	70% {background-color:#f1eee8;}
+	100% {background-color:#f1eee8;}
+}
+.dot_loader {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  transition: all .4s ease;
+  pointer-events: none;
+	display: none;
+}
+
+.dot {
+    display: inline-block;
+    margin:0 5px;
+    width:10px;
+    height: 10px;
+    border-radius: 50%;
+    animation-fill-mode: forwards;
+    animation: 1s infinite dot;
+}
+.dot:nth-child(2) { animation-delay: .1s; }
+.dot:nth-child(3) { animation-delay: .2s; }
+
+/* Implement in form styles: 
+.button-outer {
+	width: 110px; // change this to meet needs
+	cursor: pointer;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+*/
+
+/* Implement in WPCF7 (minified like this is best):
+<div class="button-outer">[submit "Crush it"]<div class="dot_loader"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div><div class="cf-success">Message received!</div> */
+
+/* # Page Templates
+---------------------------------------------------------------------------------------------------- */
+
+
+/* ## Page
+--------------------------------------------- */
+
+
+
+/* # Site Navigation
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Mobile Menu
+--------------------------------------------- */
+
+
+/* ## Desktop Menu
+--------------------------------------------- */
+
+
+/* # Site Footer
+---------------------------------------------------------------------------------------------------- */
+
+
+/* # Media Queries
+---------------------------------------------------------------------------------------------------- */
+
+
+@media (max-width: 1100px) {
+	
+}
+
+@media (max-width: 1000px) {
+}
+
+@media (max-width: 951px) {
+
+	
+}
+
+
+@media only screen and (max-width: 860px) {
+
+
+}
+
+@media (max-width: 800px) {
+
+}
+
+@media (max-width: 720px) { 
+
+}
+
+@media (max-width: 700px) {
+
+}
+
+@media (max-width: 600px) {
+
+}
+
+@media (max-width: 530px) {
+
+}
+
+@media (max-width: 500px) {
+
+}
+
+@media (max-width: 400px) {
+
+}
+
+/* # Print Styles
+---------------------------------------------------------------------------------------------------- */
+
+@media print {
+
+	*,
+	*::before,
+	*::after {
+		background: transparent !important;
+		box-shadow: none !important;
+		color: #000 !important;
+		text-shadow: none !important;
+	}
+
+	a,
+	a:visited {
+		text-decoration: underline;
+	}
+
+	a[href]::after {
+		content: " (" attr(href) ")";
+	}
+
+	abbr[title]::after {
+		content: " (" attr(title) ")";
+	}
+
+	a[href^="javascript:"]::after,
+	a[href^="#"]::after,
+	.site-title > a::after {
+		content: "";
+	}
+
+	thead {
+		display: table-header-group;
+	}
+
+	img,
+	tr {
+		page-break-inside: avoid;
+	}
+
+	img {
+		max-width: 100% !important;
+	}
+
+	@page {
+		margin: 2cm 0.5cm;
+	}
+
+	p,
+	h2,
+	h3 {
+		orphans: 3;
+		widows: 3;
+	}
+
+	blockquote,
+	pre {
+		border: 1px solid #999;
+		page-break-inside: avoid;
+	}
+
+	.content,
+	.content-sidebar {
+		width: 100%;
+	}
+
+	button,
+	input,
+	select,
+	textarea,
+	.breadcrumb,
+	.comment-edit-link,
+	.comment-form,
+	.comment-list .reply a,
+	.comment-reply-title,
+	.edit-link,
+	.entry-comments-link,
+	.entry-footer,
+	.header-widget-area,
+	.hidden-print,
+	.home-top,
+	.nav-primary,
+	.nav-secondary,
+	.post-edit-link,
+	.sidebar {
+		display: none !important;
+	}
+
+	.title-area {
+		text-align: center;
+		width: 100%;
+	}
+
+	.site-title > a {
+		margin: 0;
+		text-decoration: none;
+		text-indent: 0;
+	}
+
+	.site-inner {
+		padding-top: 0;
+		position: relative;
+		top: -100px;
+	}
+
+	.author-box {
+		margin-bottom: 0;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		orphans: 3;
+		page-break-after: avoid;
+		page-break-inside: avoid;
+		widows: 3;
+	}
+
+
+	img {
+		page-break-after: avoid;
+		page-break-inside: avoid;
+	}
+
+	blockquote,
+	pre,
+	table {
+		page-break-inside: avoid;
+	}
+
+	dl,
+	ol,
+	ul {
+		page-break-before: avoid;
+	}
+
+}
