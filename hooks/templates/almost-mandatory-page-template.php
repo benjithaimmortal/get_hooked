@@ -4,4 +4,4 @@
 */
 ?>
 
-<h3 class='date'>Your date field is: <strong><?= get_field('almost_mandatory_field') ?? '[blank]'?></strong></h3>
+<h3 class='date'>Your date field is currently: <u>&nbsp;<strong><?= strlen(get_field('almost_mandatory_field')) ? get_field('almost_mandatory_field') : '[blank]'?></strong>&nbsp;</u></h3>

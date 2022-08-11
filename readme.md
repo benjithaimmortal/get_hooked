@@ -12,7 +12,7 @@ The `scripts/` directory contains scripts that are enqueued in WordPress.
 
 The `templates/` directory contains my custom page templates, for demoing the functionality and showing my code during the conference.
 
-Sometimes you'll need a plugin to make these filters work. I installed:
+Sometimes you'll need a plugin to make this theme work as expected. I installed:
   - [Advanced Custom Fields [paid]](https://advancedcustomfields.com/)
   - [Ajax Load More [free]](https://connekthq.com/plugins/ajax-load-more/)
   - _and nothing else_

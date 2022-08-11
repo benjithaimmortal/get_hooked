@@ -386,7 +386,8 @@ th:first-child { padding-left: 0; }
 h1, h2 {
 	font-family: 'Open Sans', sans-serif;
 }
-h1 + a {
+h1 + a,
+h1 + h3 {
 	margin-top: 28px;
 }
 h2 {
