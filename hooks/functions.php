@@ -10,3 +10,4 @@
  */
 
 require_once(__DIR__ . '/functions/enqueues.php');
+require_once(__DIR__ . '/functions/load-more.php');

@@ -102,13 +102,13 @@ html {
 	font-size: 62.5%; /* 10px browser default */
 	scroll-behavior: smooth;
 }
-
 html, body {
   width: 100%;
   height: auto;
-  background-color: #e8e6e1;
-  color: #1c0927;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #303947;
+  color: #EDEADE;
+	font-weight: 400;
+  font-family: 'Merriweather', serif;
 }
 
 /* Chrome fix */
@@ -141,6 +141,8 @@ textarea:focus,
 
 a {
 	text-decoration: underline;
+	color: #edeae5;
+	font-weight: bold;
 }
 
 a:focus,
@@ -350,14 +352,77 @@ th:first-child { padding-left: 0; }
 /* Implement in WPCF7 (minified like this is best):
 <div class="button-outer">[submit "Crush it"]<div class="dot_loader"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div><div class="cf-success">Message received!</div> */
 
-/* # Page Templates
+/* # WP Adminbar
 ---------------------------------------------------------------------------------------------------- */
-
+.TopNavigation { top: 32px !important; }
+.NavMenuPanel {
+  top: 32px !important;
+  height: calc(100% - 32px) !important;
+}
+.filter-bar { top: 59px !important; }
 
 /* ## Page
 --------------------------------------------- */
+#page {
+	min-height: calc(100vh - 32px);
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding-left: 25px;
+	padding-bottom: 20px;
+}
+
+#content {
+	flex-grow: 1;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+}
 
 
+h1, h2 {
+	font-family: 'Open Sans', sans-serif;
+}
+h1 + a {
+	margin-top: 28px;
+}
+h2 {
+	margin-bottom: 14px;
+}
+
+a.block {
+	display: block;
+	margin-bottom: 14px;
+}
+
+code, kbd, pre, samp {
+	max-width: calc(100vw - 64px);
+	overflow: auto;
+	/* font-family: 'Space Mono', monospace !important;
+	letter-spacing: 0.1px !important; */
+}
+pre code.hljs {
+	padding: 20px 25px !important;
+}
+
+
+.alm-listing .alm-reveal > .alm-item {
+	padding: 10px;
+	margin-top: 10px;
+}
+.alm-listing .alm-reveal > .alm-item.featured {
+	background-color: #1f252e;
+  padding: 20px;
+  margin: 10px 0 10px -10px;
+  border-radius: 20px;
+}
+
+.post-content {
+	margin-bottom: 56px;
+}
 
 /* # Site Navigation
 ---------------------------------------------------------------------------------------------------- */
@@ -400,8 +465,23 @@ th:first-child { padding-left: 0; }
 
 }
 
-@media (max-width: 720px) { 
+@media (max-width: 782px) {
+  #wpadminbar { position: fixed !important; }
+  .TopNavigation { top: 46px !important; }
+  .NavMenuPanel {
+    top: 46px !important;
+    height: calc(100% - 46px) !important;
+  }
 
+	#page { min-height: calc(100vh - 46px); }
+  /* 
+  OR... not.
+  .site-inner { padding-top: 0px; }
+  .TopNavigation { top: 0px !important; }
+  .NavMenuPanel {
+    top: 0px !important;
+    height: calc(100% - 0px) !important;
+  } */
 }
 
 @media (max-width: 700px) {
@@ -420,8 +500,8 @@ th:first-child { padding-left: 0; }
 
 }
 
-@media (max-width: 400px) {
-
+@media (max-width: 450px) {
+  #wp-admin-bar-my-account { display: none !important; }
 }
 
 /* # Print Styles

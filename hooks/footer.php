@@ -7,8 +7,8 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since Twenty Twenty-One 1.0
+ * @subpackage Hooks!
+ * @since Hooks 1.0
  */
 
 ?>
@@ -17,7 +17,7 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<span>&lt;3 Benji</span>
+		<span><?php if (!is_front_page()) {?><a href='<?= get_site_url()?>'>Back Home</a> <?php }?>🖤 <strong>@monjibram</strong></span>
 	</footer><!-- #colophon -->
 
 </div><!-- #page -->
