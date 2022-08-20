@@ -411,19 +411,14 @@ th:first-child { padding-left: 0; }
 	padding-right: unset;
 	padding-left: 5%;
 }
-.example.flex .big-half {
-	padding-right: 5%;
-	margin: 0 auto;
-}
-.example.flex .big-half:nth-child(2) {
-	padding-right: unset;
-	padding-left: 5%;
-}
 .page-template-about-template footer {
 	display: block;
 	margin: auto;
 }
 
+h1 {
+	margin-top: 50px;
+}
 h1, h2 {
 	font-family: 'Open Sans', sans-serif;
 }
@@ -465,6 +460,10 @@ h3 + .example { margin-top: 25px; }
 
 .post-content {
 	margin-bottom: 56px;
+}
+
+footer {
+	margin-top: 40px;
 }
 
 /* # Site Navigation

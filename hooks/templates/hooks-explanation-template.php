@@ -14,6 +14,7 @@ function action_callback($first_arg, $second_arg) {
 // this is how you "hook" into a filter
 add_filter('filter_name', 'filter_callback_earlier', 10, 2);
 function filter_callback_earlier($editable_value, $argument_one) {
+  echo "<li>$editable_value</li>";
   $editable_value = 'WordPress';
   echo "<li>$editable_value</li>";
   echo "<br>";
@@ -46,12 +47,25 @@ function action_callback($first_arg, $second_arg) {
 }
 
 // this is how WordPress, plugins, and you, set an action to fire:
-do_action('action_name', "Primanti's", 'IC Light', 'Pens game');
+do_action('action_name', "Primanti's", 'IC Light', 'Pens game');</code></pre>
+
+<h3>Output:</h3>
+<div class='example'>
+  <strong>The action is called ... now!</strong>
+  <ul>
+    <br>
+    <?php
+      // this is how WordPress, plugins, and you, set an action to fire:
+      do_action('action_name', "Primanti's", 'IC Light', 'Pens game');
+    ?>
+  </ul>
+</div>
 
 
-// this is how you "hook" into a filter
+<pre><code class='language-php'>// this is how you "hook" into a filter
 add_filter('filter_name', 'filter_callback_earlier', 10, 2);
 function filter_callback_earlier($editable_value, $argument_one) {
+  echo "$editable_value";
   $editable_value = 'WordPress';
   echo "$editable_value";
   return $editable_value;
@@ -74,29 +88,29 @@ function filter_callback_latest($editable_value, $argument_one, $argument_two) {
   // no need to add a return, this isn't filtering anything
 }
 
-// run the filter like this.
+// call those filters like this.
 apply_filters('filter_name', 'wordpress', 'Jamstack', '&lt;3');</code></pre>
 
+
 <h3>Output:</h3>
-<div class='example flex'>
-  <div class='big-half'>
-    <strong>The Action</strong>
-    <ul>
-      <br>
-      <?php
-        // this is how WordPress, plugins, and you, set an action to fire:
-        do_action('action_name', "Primanti's", 'IC Light', 'Pens game');
-      ?>
-    </ul>
-  </div>
-  <div class='big-half'>
-    <strong>The Filter</strong>
-    <ul>
-      <br>
-      <?php
-        // same here for a filter. note the order!
-        apply_filters('filter_name', 'wordpress', 'Jamstack', '&lt;3');
-      ?>
-    </ul>
-  </div>
+<div class='example'>
+  <strong>The filter is called ... now!</strong>
+  <ul>
+    <br>
+    <?php
+      // call those filters like this
+      apply_filters('filter_name', 'wordpress', 'Jamstack', '&lt;3');
+    ?>
+  </ul>
 </div>
+
+
+<h2>Three crucial helper links:</h2>
+<div class='example'>
+  <a href='http://rachievee.com/the-wordpress-hooks-firing-sequence/' class='block'>Rachel Vasquez</a>
+  <a href='https://adambrown.info/p/wp_hooks' class='block'>Adam R. Brown</a>
+  <a href='https://developer.wordpress.org/reference/hooks/' class='block'>WordPress Reference</a>
+</div>
+<br>
+<br>
+<br>
