@@ -15,13 +15,6 @@ function hooks_scripts() {
 	// 	// wp_enqueue_style( 'twenty-twenty-one-style', get_template_directory_uri() . '/assets/css/ie.css', array(), wp_get_theme()->get( 'Version' ) );
 	// } else {
 	// If not IE, use the standard stylesheet.
-	wp_enqueue_style(
-		'base_stylesheet',
-		get_template_directory_uri() . '/style.css',
-		array(),
-		filemtime(get_template_directory() . '/style.css'),
-		false
-	);
 
 	/**
 	 * Highlight JS for all my custom code blocks
@@ -39,6 +32,14 @@ function hooks_scripts() {
 		get_template_directory_uri() . '/scripts/highlight.js',
 		array(),
 		filemtime( get_template_directory() . '/scripts/highlight.js'),
+		false
+	);
+
+	wp_enqueue_style(
+		'base_stylesheet',
+		get_template_directory_uri() . '/style.css',
+		array(),
+		filemtime(get_template_directory() . '/style.css'),
 		false
 	);
 }

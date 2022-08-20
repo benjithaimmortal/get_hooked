@@ -383,6 +383,47 @@ th:first-child { padding-left: 0; }
 }
 
 
+.page-template-about-template h1,
+.page-template-about-template h3 {
+	text-align: center;
+}
+.benji {
+	width: 50%;
+	margin: 30px auto 40px;
+	aspect-ratio: 1.2/1;
+	object-fit: cover;
+	object-position: top center;
+	display: block;
+}
+.example.flex {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	margin-bottom: 50px;
+}
+.example.flex .half {
+	max-width: 50%;
+	padding-right: 5%;
+	margin: 0 auto;
+}
+.example.flex .half:nth-child(2) {
+	padding-right: unset;
+	padding-left: 5%;
+}
+.example.flex .big-half {
+	padding-right: 5%;
+	margin: 0 auto;
+}
+.example.flex .big-half:nth-child(2) {
+	padding-right: unset;
+	padding-left: 5%;
+}
+.page-template-about-template footer {
+	display: block;
+	margin: auto;
+}
+
 h1, h2 {
 	font-family: 'Open Sans', sans-serif;
 }
@@ -409,6 +450,7 @@ pre code.hljs {
 	padding: 20px 25px !important;
 }
 
+h3 + .example { margin-top: 25px; }
 
 .alm-listing .alm-reveal > .alm-item {
 	padding: 10px;
