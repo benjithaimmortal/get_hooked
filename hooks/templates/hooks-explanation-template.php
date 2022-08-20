@@ -111,6 +111,3 @@ apply_filters('filter_name', 'wordpress', 'Jamstack', '&lt;3');</code></pre>
   <a href='https://adambrown.info/p/wp_hooks' class='block'>Adam R. Brown</a>
   <a href='https://developer.wordpress.org/reference/hooks/' class='block'>WordPress Reference</a>
 </div>
-<br>
-<br>
-<br>
