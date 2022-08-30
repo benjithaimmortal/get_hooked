@@ -44,7 +44,7 @@ function simplify_the_dash() {
     remove_menu_page('ajax-load-more');
   }
 }
-add_action( 'admin_menu', 'simplify_the_dash' );
+// add_action( 'admin_menu', 'simplify_the_dash' );
 
 //*Top Hat Branding
 function remove_footer_admin () {

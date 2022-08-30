@@ -61,6 +61,7 @@ do_action('action_name', "Primanti's", 'IC Light', 'Pens game');</code></pre>
   </ul>
 </div>
 
+<br><br><br>
 
 <pre><code class='language-php'>// this is how you "hook" into a filter
 add_filter('filter_name', 'filter_callback_earlier', 10, 2);
@@ -104,10 +105,13 @@ apply_filters('filter_name', 'wordpress', 'Jamstack', '&lt;3');</code></pre>
   </ul>
 </div>
 
+<br><br>
 
-<h2>Three crucial helper links:</h2>
+<h2>Four crucial helper links:</h2>
 <div class='example'>
   <a href='http://rachievee.com/the-wordpress-hooks-firing-sequence/' class='block'>Rachel Vasquez</a>
   <a href='https://adambrown.info/p/wp_hooks' class='block'>Adam R. Brown</a>
-  <a href='https://developer.wordpress.org/reference/hooks/' class='block'>WordPress Reference</a>
+  <a href='https://developer.wordpress.org/reference/hooks/' class='block'>WordPress.org Full Hook List</a>
+  <a href='https://codex.wordpress.org/Plugin_API/Action_Reference/' class=''>WordPress.org Action Reference</a> and <a href='https://codex.wordpress.org/Plugin_API/Filter_Reference' class=''>WordPress.org Filter Reference</a>
+
 </div>

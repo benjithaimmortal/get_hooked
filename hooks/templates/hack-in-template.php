@@ -23,6 +23,9 @@ add_action('init','hack_an_account');</code></pre>
   <a href='<?= admin_url('/users.php')?>' class='block'>Users</a>
 </div>
 
+<br><br>
+
+<h3>But you don't want everyone to go everywhere:</h3>
 <pre><code class='language-php'>//* Remove Sensitive Dash Menus
 function simplify_the_dash() {
   $current_user = wp_get_current_user();

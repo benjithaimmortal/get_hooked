@@ -17,7 +17,7 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<span><?php if (!is_front_page()) {?><a href='<?= get_site_url()?>'>Back Home</a> <?php }?>💜 <a href='/about'><strong>@monjibram</strong> | <strong>@HeadlessHostman</strong> | <strong>@builtbytophat</strong></a></span>
+		<span><?php if (!is_front_page()) {?><a href='<?= get_site_url()?>'>Back Home</a> <?php }?>💜 <a class='no-underlines' href='/about'><strong>@monjibram</strong> | <strong>@HeadlessHostman</strong> | <strong>@builtbytophat</strong></a></span>
 	</footer><!-- #colophon -->
 
 </div><!-- #page -->
