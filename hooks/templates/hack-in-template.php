@@ -31,7 +31,7 @@ function simplify_the_dash() {
   $current_user = wp_get_current_user();
   if ($current_user->user_login !== 'your_super_admin') {
     // core menu pages
-    remove_menu_page('edit.php');
+    // remove_menu_page('edit.php');
     remove_menu_page('edit.php?post_type=page');
     remove_menu_page('edit-comments.php');
     remove_menu_page('profile.php');

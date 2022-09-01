@@ -4,8 +4,20 @@
 */
 
 ?>
+<br><br>
+<h2>Results: [<a href='?sort'>Use the Filter</a>]</h2>
+<?php
+$shortcode = isset($_GET['sort']) ? '[ajax_load_more post_type="post" id="custom_alm" posts_per_page="2"]' : '[ajax_load_more post_type="post" posts_per_page="2"]';
+echo do_shortcode($shortcode); ?>
+<br><br>
+<pre><code class='language-php'>add_filter( 'alm_query_args_custom_alm', 'first_sort_featured', 10, 2);
+/**
+ * where the shortcode has an ID "custom_alm": 
+ * [ajax_load_more post_type="post" id="custom_alm" posts_per_page="2"]
+ */
 
-<pre><code class='language-php'>function first_sort_featured( $args, $id ){
+
+function first_sort_featured( $args, $id ){
   /**
    * ALM uses these defaults, no touchy touchy!
    * $args['posts_per_page'] = -1;
@@ -13,9 +25,7 @@
    * $args['post_type'] = 'posts';
    */
   
-  /**
-   * ALM should default this. But it's an example of how we're setting variables
-   */
+  // ALM should default this. But it's an example of how we're setting variables
   $args['post_status'] = 'publish';
   
   /**
@@ -48,9 +58,4 @@
   }
   return $args;
 }
-add_filter( 'alm_query_args_custom_alm', 'first_sort_featured', 10, 2);</code></pre>
-
-<h2>Results: [<a href='?sort'>Use the Filter</a>]</h2>
-<?php
-$shortcode = isset($_GET['sort']) ? '[ajax_load_more post_type="post" id="custom_alm" posts_per_page="2"]' : '[ajax_load_more post_type="post" posts_per_page="2"]';
-echo do_shortcode($shortcode); ?>
+</code></pre>

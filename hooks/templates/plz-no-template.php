@@ -16,11 +16,11 @@ function bad_data_science() {
 }
 add_action('wp_head', 'bad_data_science');
 
-// maybe do this?
+// maybe do this instead?
 function not_so_bad_data_science() {
   bad_data_science();
 }
-add_action('custom_hook_from_button', 'not_so_bad_data_science');
+add_action('custom_hook_from_admin_button_click', 'not_so_bad_data_science');
 </code></pre>
 
 <br><br><br>
@@ -47,4 +47,6 @@ function good_cron() {
 $two_weeks = 1209600;
 wp_schedule_single_event($last_run_time + $two_weeks, 'good_cron');
 </code></pre>
+
+
 

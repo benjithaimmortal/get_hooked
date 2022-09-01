@@ -113,7 +113,7 @@ html, body {
 
 /* Chrome fix */
 body > div {
-	font-size: 20px;
+	font-size: 200%;
   scroll-margin-top: 20px;
 }
 
@@ -387,6 +387,9 @@ th:first-child { padding-left: 0; }
 }
 
 
+#primary {
+	margin: 0 auto;
+}
 .page-template-about-template h1,
 .page-template-about-template h3 {
 	text-align: center;
@@ -422,6 +425,8 @@ footer {
 	margin-left: auto;
 	margin-right: auto;
 }
+.page-template-resources-template footer,
+.page-template-homepage footer,
 .page-template-about-template footer {
 	display: block;
 	width: unset;

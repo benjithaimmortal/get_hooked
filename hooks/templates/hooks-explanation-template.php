@@ -10,32 +10,6 @@ function action_callback($first_arg, $second_arg) {
   echo "<li>$second_arg</li>";
   echo "<br>";
 }
-
-// this is how you "hook" into a filter
-add_filter('filter_name', 'filter_callback_earlier', 10, 2);
-function filter_callback_earlier($editable_value, $argument_one) {
-  echo "<li>$editable_value</li>";
-  $editable_value = 'WordPress';
-  echo "<li>$editable_value</li>";
-  echo "<br>";
-  return $editable_value;
-}
-// hooking that filter after the fact modifies its editable_value
-add_filter('filter_name', 'filter_callback_later', 11, 3);
-function filter_callback_later($editable_value, $argument_one, $argument_two) {
-  echo "<li>$editable_value</li>";
-  echo "<li>$argument_two</li>";
-  echo "<br>";
-  return $editable_value;
-}
-// just for kicks, let's add an action to the end! editable_value is still changed
-add_action('filter_name', 'filter_callback_latest', 12, 3);
-function filter_callback_latest($editable_value, $argument_one, $argument_two) {
-  echo "<li>$editable_value</li>";
-  echo "<li>$argument_one</li>";
-  echo "<li>$argument_two</li>";
-  echo "<br>";
-}
 ?>
 
 

@@ -4,7 +4,7 @@
 */
 ?>
 
-<img class='benji' src='/wp-content/themes/hooks/assets/images/benji-straight-on.jpg' alt='Benji'>
+<!-- <img class='benji' src='/wp-content/themes/hooks/assets/images/benji-straight-on.jpg' alt='Benji'> -->
 <h3>Senior Web Developer - Top Hat</h3>
 <div class='example flex'>
   <div class='half'>
