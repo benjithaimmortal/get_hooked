@@ -23,5 +23,5 @@ Sometimes you'll need a plugin to make this theme work as expected. I installed:
   2. Activate the theme within the WordPress backend.
   3. Make a whole slew of pages for the various page templates.
   4. Install the recommended plugins (ACF and ALM)
-  5. Accept my apologies, as I've hard linked the homepage theme to post IDs :( but you can edit them at will!
+  5. Accept my apologies, as I've hard linked the homepage template to post IDs :( but you can edit them at will!
   6. Go make something awesome!
