@@ -18,7 +18,7 @@ function first_sort_featured( $args, $id ){
    * ... but be sure every thing you're passing has this meta key!
    *  */
   $args['meta_query']['first_sort_featured'] = array(
-    'key'     => 'featured',
+    'key' => 'featured',
   );
 
   if (!isset($args['orderby'])) {

@@ -13,11 +13,7 @@ function action_callback($first_arg, $second_arg) {
 ?>
 
 
-<pre><code class='language-php'>// this is how WordPress and plugins [and you!], set an action to fire:
-$sports = array('hockey' => 'Pens', 'football' => 'Stillers', 'baseball' => "Par'ts");
-do_action('action_name', "Primanti's", 'IC Light', $sports);
-
-/**
+<pre><code class='language-php'>/**
  * this is how you "hook" into the action.
  * requires: action name [string], callback function name [string]
  * optional: priority [integer], arguments [integer]
@@ -27,6 +23,19 @@ function action_callback($first_arg, $second_arg) {
   echo "$first_arg";
   echo "$second_arg";
 }
+
+
+
+// real world example
+add_action('wp_head', function(){
+  echo '&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;';
+});
+
+
+
+// this is how WordPress and plugins [and you!], fire off an action:
+$sports = array('hockey' => 'Pens', 'football' => 'Stillers', 'baseball' => "Par'ts");
+do_action('action_name', "Primanti's", 'IC Light', $sports);
 </code></pre>
 
 <h3>Output:</h3>
@@ -36,14 +45,8 @@ function action_callback($first_arg, $second_arg) {
     <br>
     <?php
       // this is how WordPress, plugins, and you, set an action to fire:
-    $sports = array('hockey' => 'Pens', 'football' => 'Stillers', 'baseball' => "Par'ts");
+      $sports = array('hockey' => 'Pens', 'football' => 'Stillers', 'baseball' => "Par'ts");
       do_action('action_name', "Primanti's", 'IC Light', $sports);
     ?>
   </ul>
 </div>
-
-<pre><code class='language-php'>// real world example
-add_action('wp_head', function(){
-  echo '&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;';
-});
-</code></pre>

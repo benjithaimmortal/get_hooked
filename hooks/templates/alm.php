@@ -34,28 +34,43 @@ function first_sort_featured( $args, $id ){
    * ... but be sure every thing you're passing has this meta key!
    *  */
   $args['meta_query']['first_sort_featured'] = array(
-    'key'     => 'featured',
+    'key' => 'featured',
   );
 
+
+  /**
+   * This is what a WP_Query orderby array often looks like (when it's an array):
+   * $args['orderby'] = array(
+   *   'first_meta_key_or_name' => 'direction',
+   *   'second_meta_key_or_name' => 'direction',
+   * );
+   */
+
+
+  // no order? set it and forget it
   if (!isset($args['orderby'])) {
-    // no order? set it and forget it
     $args['orderby'] = array('first_sort_featured' => 'DESC');
+
+  // check if it's set at all. skip everything if it is.
   } elseif (!isset($args['orderby']['first_sort_featured'])) {
-    // check if it's set at all. skip if it is.
+    
+    // if there's already an array, put this FIRST
     if (is_array($args['orderby'])) {
-      // if there's already an array, put this FIRST
       $args['orderby'] = array_unshift($args['orderby'], array('first_sort_featured' => 'DESC'));
+
+    /**
+     * ALM likes to use the array key shortcut for its defaults and shortcodes.
+     * If orderby is not an array, we make it an one with our featured key first.
+     */
     } else {
-      /**
-       * ALM likes to use the array key shortcut for its defaults and shortcodes.
-       * If orderby is not an array, we make it an one with our featured key first.
-       */
       $args['orderby'] = array(
         'first_sort_featured' => 'DESC',
         $args['orderby'] => ($args['orderby'] == 'post_title' ? 'ASC' : 'DESC')
       );
     }
   }
+
+  // ALWAYS...
   return $args;
 }
 </code></pre>
