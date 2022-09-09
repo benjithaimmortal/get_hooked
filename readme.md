@@ -2,6 +2,18 @@
 
 Welcome! Make yourself at home; browse around.
 
+
+## The links from the end of this talk are also here:
+  - [Rachel Vasquez](http://rachievee.com/the-wordpress-hooks-firing-sequence/)
+  - [Adam R. Brown](https://adambrown.info/p/wp_hooks)
+  - []
+
+  - [Full Hook List](https://developer.wordpress.org/reference/hooks/)
+  - [Plugin API Reference (for Admin requests)](https://codex.wordpress.org/Plugin_API/Action_Reference/#Actions_Run_During_an_Admin_Page_Request)
+  - [Action Reference](https://codex.wordpress.org/Plugin_API/Action_Reference/) and [Filter Reference](https://codex.wordpress.org/Plugin_API/Filter_Reference)
+
+
+
 ## What's this theme about?
 
 It's a really simple implementation to show off WordPress hook actions and filters.

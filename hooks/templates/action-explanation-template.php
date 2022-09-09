@@ -14,7 +14,7 @@ function action_callback($first_arg, $second_arg) {
 
 
 <pre><code class='language-php'>/**
- * this is how you "hook" into the action.
+ * this is how you "hook" into an action.
  * requires: action name [string], callback function name [string]
  * optional: priority [integer], arguments [integer]
  */ 
